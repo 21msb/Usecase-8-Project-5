@@ -30,6 +30,13 @@ For clustering, we used two different machine learning models: DBSCAN and K-mean
 - **Initialize the LabelEncoder**: A LabelEncoder object was created to convert categorical text data into a model-understandable numerical format.
 
 ## Hyperparameter Optimization:
+To fine-tune the hyperparameters of our K-means model, we utilized the elbow method, a popular technique to determine the optimal number of clusters. Here’s the process we followed:
+
+- **Elbow Method**: We plotted the sum of squared distances of samples to their closest cluster center for different numbers of clusters (k). As k increases, the sum of squared distances decreases. We looked for the "elbow point" where the rate of decrease sharply shifts, indicating that adding more clusters does not significantly improve the fit.
+
+  This method helped us choose the most appropriate value for k, balancing between model complexity and clustering effectiveness.
+
+By applying the elbow method, we were able to identify the optimal number of clusters that minimized within-cluster variance while maximizing separation between different clusters, ensuring our model was both effective and efficient.
 
 ## Performance Metric Visuals:
 
